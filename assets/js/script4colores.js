@@ -39,24 +39,24 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-/*AGREGAR DIV PRESIONANDO Q,W,E */
-let colorNewDiv = false; 
+/*AGREGAR DIV PRESIONANDO Q,W,E*/
 
-if (event.key ==='q') {
+document.addEventListener('keydown', (event) => {
+let colorNewDiv = false
+
+if (event.key=== 'q') {
     colorNewDiv = 'purple'
-}
-else if (event.key === 'w'){
+} else if (event.key === 'w'){
     colorNewDiv = 'grey'
-}
-else if (event.key === 'e') {
+} else if (event.key === 'e') {
     colorNewDiv = 'brown'
 }
 
-if (colorNewDiv) {
+if (colorNewDiv){
     const newDiv = document.createElement('div')
     newDiv.style.width = '200px'
     newDiv.style.height = '200px'
-    newDiv.style.backgroundColor = newDiv
+    newDiv.style.backgroundColor = colorNewDiv
     newDiv.style.margin = '10px'
-    document.body.appendChild(newDiv)
-}
+    document.body.appendChild(newDiv)}
+}) 
