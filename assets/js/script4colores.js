@@ -6,11 +6,14 @@ const divRojo = document.getElementById('rojo')
 const divVerde = document.getElementById('verde')
 const divAmarillo = document.getElementById('amarillo')
 
+//Crear la función
 const colorNegro = function (colorDiv, color) {
     colorDiv.addEventListener('click', () => {
         colorDiv.style.backgroundColor = color
     })
 }
+
+//Ejecutar la función
 colorNegro(divAzul, 'black')
 colorNegro(divRojo, 'black')
 colorNegro(divVerde, 'black')
@@ -18,23 +21,25 @@ colorNegro(divAmarillo, 'black')
 
 /*CAMBIAR COLOR PRESIONANDO A,S,D*/
 
-const divKey = document.getElementById('key')
+//Crear la función
+const changeColor = function(tecla, color) {
+    const divKey = document.getElementById('key')
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'a') {
-        divKey.style.backgroundColor = 'pink'
-    }
-    else if (event.key === 's') {
-        divKey.style.backgroundColor = 'orange'
-    }
+    document.addEventListener('keydown', (event) =>{
+        if (event.key === tecla){
+            divKey.style.backgroundColor = color
+        }
+    })
+}
 
-    else if (event.key === 'd') {
-        divKey.style.backgroundColor = 'skyBlue'
-    }
-})
+//Ejecutar la función
+changeColor('a', 'pink')
+changeColor('s', 'orange')
+changeColor('d', 'skyBlue')
+
 
 /*AGREGAR DIV PRESIONANDO Q,W,E*/
-
+//Crear la función
 const createDiv = function (tecla, color) {
     document.addEventListener('keydown', (event) => {
         let colorNewDiv = false
@@ -54,7 +59,7 @@ const createDiv = function (tecla, color) {
 
     })
 }
-
+//Ejecutar la función
 createDiv('q', 'purple')
 createDiv('w', 'grey')
 createDiv('e', 'brown')
