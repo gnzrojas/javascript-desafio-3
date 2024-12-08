@@ -6,7 +6,17 @@ const divRojo = document.getElementById('rojo')
 const divVerde = document.getElementById('verde')
 const divAmarillo = document.getElementById('amarillo')
 
-divAzul.addEventListener('click', () => {
+const colorNegro = function(colorDiv, color) {
+    colorDiv.addEventListener('click', () => {
+        colorDiv.style.backgroundColor = color
+    })
+} 
+colorNegro(divAzul, 'black')
+colorNegro(divRojo, 'black')
+colorNegro(divVerde, 'black')
+colorNegro(divAmarillo, 'black')
+
+/*divAzul.addEventListener('click', () => {
     divAzul.style.backgroundColor = 'black'
 })
 
@@ -21,7 +31,7 @@ divVerde.addEventListener('click', () => {
 divAmarillo.addEventListener('click', () => {
     divAmarillo.style.backgroundColor = 'black'
 })
-
+*/
 /*CAMBIAR COLOR PRESIONANDO A,S,D*/
 
 const divKey = document.getElementById('key')
